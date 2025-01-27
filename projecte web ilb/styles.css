@@ -1,0 +1,131 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif; /* Fuente Arial */
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra todo horizontalmente */
+    text-align: center; /* Centra el texto */
+}
+
+header {
+    background-color: #00BCD4; /* Azul cian */
+    color: white;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra el contenido del main */
+}
+
+section {
+    margin-bottom: 40px;
+    width: 100%;
+    max-width: 800px; /* Limita el ancho de las secciones */
+}
+
+article {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+h2 {
+    color: #00BCD4; /* Azul cian */
+}
+
+footer {
+    background-color: #00BCD4; /* Azul cian */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+/* Estilos para el carrusel */
+.carrusel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    width: 100%;
+}
+
+.carrusel img {
+    scroll-snap-align: start;
+    width: 100%;
+    height: auto;
+    flex: 0 0 auto;
+}
+
+/* Estilos para el mapa */
+#mapa iframe {
+    width: 100%;
+    height: 450px;
+    border: none;
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .carrusel {
+        flex-direction: column;
+    }
+
+    #mapa iframe {
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 24px;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .carrusel img {
+        width: 100%;
+    }
+
+    #mapa iframe {
+        height: 200px;
+    }
+}
